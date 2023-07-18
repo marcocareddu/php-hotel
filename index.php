@@ -37,8 +37,11 @@ $hotels = [
         'vote' => 2,
         'distance_to_center' => 50
     ],
-
 ];
+
+// Get value from page
+$there_is_Parking = $_GET['parking'];
+$input_vote = $_GET['vote'];
 
 ?>
 
