@@ -68,6 +68,15 @@ $hotels = [
             <div class="text-center pt-3">
                 <div class="pt-3">
 
+                    <?php foreach ($hotels as $hotel) : ?>
+                        <h3> <?= $hotel['name'] ?> </h3>
+                        <ul>
+                            <li><?= $hotel['description'] ?></li>
+                            <li>Parcheggio: <?= $hotel['parking'] ?></li>
+                            <li>Voto: <?= $hotel['vote'] ?></li>
+                            <li>Distanza dal centro: <?= $hotel['distance_to_center'] ?>km</li>
+                        </ul>
+                    <?php endforeach ?>
                 </div>
             </div>
         </div>
