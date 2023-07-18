@@ -42,15 +42,27 @@ $hotels = [
 // Get value from page
 $there_is_Parking = $_GET['parking'] ?? '';
 $input_vote = $_GET['vote'] ?? 0;
+var_dump($there_is_Parking);
 
 // Create variable with filters
-
 $filtered_hotels = [];
+$temp_filtered_hotels = [];
 
+// Filter from vote
 foreach ($hotels as $hotel) {
     if ($hotel['vote'] > $input_vote) {
         array_push($filtered_hotels, $hotel);
     }
+}
+
+// Filter from parking
+if ($there_is_Parking === 'on') {
+    foreach ($filtered_hotels as $hotel) {
+        if ($hotel['parking']) {
+            array_push($temp_filtered_hotels, $hotel);
+        }
+    }
+    $filtered_hotels = $temp_filtered_hotels;
 }
 
 ?>
