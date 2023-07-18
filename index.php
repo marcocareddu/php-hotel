@@ -42,7 +42,6 @@ $hotels = [
 // Get value from page
 $there_is_Parking = $_GET['parking'] ?? '';
 $input_vote = $_GET['vote'] ?? 0;
-var_dump($there_is_Parking);
 
 // Create variable with filters
 $filtered_hotels = [];
