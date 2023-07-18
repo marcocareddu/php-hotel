@@ -16,7 +16,17 @@
 </head>
 
 <body>
+    <div class="container d-flex justify-content-center">
+        <div class="mt-3">
 
+            <h1>HOTEL</h1>
+            <div class="text-center pt-3">
+                <div class="pt-3">
+
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
