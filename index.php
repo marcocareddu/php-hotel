@@ -12,6 +12,10 @@ $input_vote = $_GET['vote'] ?? 0;
 $filtered_hotels = [];
 $temp_filtered_hotels = [];
 
+// Icons Template
+$success = '<span class="text-success"><i class="fa-solid fa-circle-check fa-lg"></i></span>';
+$unsuccess =  '<span class="text-danger"><i class="fa-solid fa-circle-xmark fa-lg"></i></span>';
+
 // Filter from vote
 foreach ($hotels as $hotel) {
     if ($hotel['vote'] >= $input_vote) {
@@ -83,7 +87,7 @@ if ($there_is_Parking === 'on') {
                                 <tr>
                                     <td><?= $hotel['name'] ?></td>
                                     <td><?= $hotel['description'] ?></td>
-                                    <td><?= $hotel['parking'] ? '<span class="badge rounded-pill bg-success">V</span>' : '<span class="badge rounded-pill bg-danger">X</span>'; ?></td>
+                                    <td class="text-center"><?= $hotel['parking'] ? $success : $unsuccess; ?></td>
                                     <td><?= $hotel['vote'] ?></td>
                                     <td><?= $hotel['distance_to_center'] ?>km</td>
                                 </tr>
