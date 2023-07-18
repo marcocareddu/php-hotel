@@ -65,7 +65,7 @@ $hotels = [
         <div class="mt-3">
 
             <h1>HOTEL</h1>
-            <div class="text-center pt-3">
+            <div class="pt-3">
                 <div class="pt-3">
 
                     <!-- Table Start Here -->
@@ -89,7 +89,7 @@ $hotels = [
                                     <td><?= $hotel['description'] ?></td>
                                     <td><?= $hotel['parking'] ?></td>
                                     <td><?= $hotel['vote'] ?></td>
-                                    <td><?= $hotel['distance_to_center'] ?></td>
+                                    <td><?= $hotel['distance_to_center'] ?>km</td>
                                 </tr>
                             <?php endforeach ?>
 
