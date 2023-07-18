@@ -40,8 +40,18 @@ $hotels = [
 ];
 
 // Get value from page
-$there_is_Parking = $_GET['parking'];
-$input_vote = $_GET['vote'];
+$there_is_Parking = $_GET['parking'] ?? '';
+$input_vote = $_GET['vote'] ?? 0;
+
+// Create variable with filters
+
+$filtered_hotels = [];
+
+foreach ($hotels as $hotel) {
+    if ($hotel['vote'] > $input_vote) {
+        array_push($filtered_hotels, $hotel);
+    }
+}
 
 ?>
 
@@ -101,7 +111,7 @@ $input_vote = $_GET['vote'];
 
                         <tbody>
                             <!-- Dynamic table rows -->
-                            <?php foreach ($hotels as $hotel) : ?>
+                            <?php foreach ($filtered_hotels as $hotel) : ?>
                                 <tr>
                                     <td><?= $hotel['name'] ?></td>
                                     <td><?= $hotel['description'] ?></td>
