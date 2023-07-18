@@ -80,7 +80,7 @@ if ($there_is_Parking === 'on') {
                                 <tr>
                                     <td><?= $hotel['name'] ?></td>
                                     <td><?= $hotel['description'] ?></td>
-                                    <td><?= $hotel['parking'] ? 'Si' : 'No'; ?></td>
+                                    <td><?= $hotel['parking'] ? '<span class="badge rounded-pill bg-success">V</span>' : '<span class="badge rounded-pill bg-danger">X</span>'; ?></td>
                                     <td><?= $hotel['vote'] ?></td>
                                     <td><?= $hotel['distance_to_center'] ?>km</td>
                                 </tr>
