@@ -49,7 +49,7 @@ $temp_filtered_hotels = [];
 
 // Filter from vote
 foreach ($hotels as $hotel) {
-    if ($hotel['vote'] > $input_vote) {
+    if ($hotel['vote'] >= $input_vote) {
         array_push($filtered_hotels, $hotel);
     }
 }
@@ -103,6 +103,7 @@ if ($there_is_Parking === 'on') {
                             <label class="form-check-label" for="parking">Con parcheggio</label>
                         </div>
                         <button class="btn btn-primary">Cerca</button>
+                        <a class="btn btn-secondary ms-2" href="index.php">Reset</a>
                     </form>
                 </div>
 
