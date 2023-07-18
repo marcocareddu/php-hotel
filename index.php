@@ -68,15 +68,34 @@ $hotels = [
             <div class="text-center pt-3">
                 <div class="pt-3">
 
-                    <?php foreach ($hotels as $hotel) : ?>
-                        <h3> <?= $hotel['name'] ?> </h3>
-                        <ul>
-                            <li><?= $hotel['description'] ?></li>
-                            <li>Parcheggio: <?= $hotel['parking'] ?></li>
-                            <li>Voto: <?= $hotel['vote'] ?></li>
-                            <li>Distanza dal centro: <?= $hotel['distance_to_center'] ?>km</li>
-                        </ul>
-                    <?php endforeach ?>
+                    <!-- Table Start Here -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Descrizione</th>
+                                <th scope="col">Parcheggio</th>
+                                <th scope="col">Voto</th>
+                                <th scope="col">Distanza dal centro</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <!-- Dynamic table rows -->
+                            <?php foreach ($hotels as $hotel) : ?>
+                                <tr>
+                                    <td><?= $hotel['name'] ?></td>
+                                    <td><?= $hotel['description'] ?></td>
+                                    <td><?= $hotel['parking'] ?></td>
+                                    <td><?= $hotel['vote'] ?></td>
+                                    <td><?= $hotel['distance_to_center'] ?></td>
+                                </tr>
+                            <?php endforeach ?>
+
+                        </tbody>
+                    </table>
+
                 </div>
             </div>
         </div>
